@@ -1,0 +1,19 @@
+[
+    {
+        "website_name": "Jstore",
+        "description": "Retrouvez tous les accessoires et habits pour femmes, jeunes filles etc...",
+        "email": "raniamamou250@gmail.com",
+        "taxe_rate": "20",
+        "logo": "9b7930e57c18dd53156795dcd1c0be2ba55b5741.ico",
+        "currency": "EUR",
+        "facebookLink": "https://facebook.com/",
+        "youtubeLink": "https://www.youtube.com/",
+        "instagramLink": "https://www.instagram.com/",
+        "phone": "+33 066767243",
+        "street": "96 Rue Symfony",
+        "city": "La Rochelle",
+        "code_postal": "17000",
+        "state": "France",
+        "copyright": ""
+    }
+]

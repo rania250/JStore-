@@ -1,0 +1,87 @@
+{% extends 'default.html.twig' %}
+
+{% block title %}Jstore | Checkout page{% endblock %}
+
+{% block body %}
+
+<div  class="main_content">
+    <div  class="section">
+        <div  class="container">
+            <div  class="row">
+
+            </div>
+            <div  class="row">
+                <div  class="col-12">
+                    <div  class="medium_divider"></div>
+                    <div  class="divider center_icon"><i 
+                            class="linearicons-credit-card"></i></div>
+                    <div  class="medium_divider"></div>
+                </div>
+            </div>
+            <div  class="row">
+                <div  class="col-md-6">
+                    <div  class="heading_s1">
+                        <h4 >Billing Address</h4>
+                    </div>
+                    <div  class="heading_s1">
+                        <h4 >Shipping Address</h4>
+                    </div>
+                  
+                   
+                </div>
+                <div  class="col-md-6">
+                    <div  class="order_review">
+                        <div  class="heading_s1">
+                            <h4 >Your Orders</h4>
+                        </div>
+                        <div  class="table-responsive order_table">
+                            <table  class="table">
+                                <thead >
+                                    <tr >
+                                        <th >Product</th>
+                                        <th >Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    {% for item in cart.items %}
+                                    <tr >
+                                        <td >
+                                            {{ item.product.name }} 
+                                            <span class="product-qty">x {{item.quantity}}</span>
+                                        </td>
+                                        <td >
+                                            {{(item.product.soldePrice/100) |format_currency('EUR')}}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot >
+                                    <tr >
+                                        <th >SubTotal</th>
+                                        <td  class="product-subtotal">{{(cart.sub_total/100) |format_currency('EUR')}}</td>
+                                    </tr>
+                                    <tr >
+                                        <th >Shipping</th>
+                                        <td >Free Shipping</td>
+                                    </tr>
+                                    <tr >
+                                        <th >Total</th>
+                                        <td  class="product-subtotal">{{ (cart.sub_total/100) |format_currency('EUR') }}</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div  class="payment_method">
+                           
+                        </div>
+                        <a  href="#" class="btn btn-fill-out btn-block">
+                            Pay now ({{ (cart.sub_total/100) |format_currency('EUR') }})
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
